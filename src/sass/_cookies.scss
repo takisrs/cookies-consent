@@ -1,0 +1,77 @@
+.cookies {
+    position:fixed;
+    bottom:1rem;
+    left:1rem;
+    background:rgba($main-color, 0.87);
+    color:$text-color;
+    padding:1rem;
+    z-index:10;
+    min-width:20rem;
+    max-width:30rem;
+
+    @media (max-width: 768px){
+        bottom:0;
+        left:0;
+        right:0;
+        max-width:100%;
+        min-width:auto;
+    }
+
+    &__title{
+        margin:0 0 0.5rem;
+    }
+
+    &__message{
+        padding:0.5rem 0rem;
+    }
+
+    &__actions{
+        display:flex;
+        align-items:center;
+    }
+
+    &__preferences{
+        display:none;
+        padding:1.5rem;
+        background:rgba($secondary-color, 0.9);
+        color:$text-color;
+        margin-top:1rem;
+    }
+
+    &__action{
+        margin-top:0.5rem;
+
+        &--approve{
+            margin-right:1rem;
+        }
+
+        &--manage{
+            display:flex;
+            align-items: center;
+            color:$text-color;
+
+            &:focus,
+            &:hover{
+                color:$text-color;
+            }
+
+            span, svg{
+                margin-left:0.4rem;
+            }
+        }
+    }
+
+    &__category{
+        margin:1rem 0;
+
+        h3{
+            display:flex;
+            align-items:center;
+            margin-bottom:0.4rem;
+        }
+
+        .switch{
+            margin-right:1rem;
+        }
+    }
+}

@@ -1,0 +1,66 @@
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 6rem;
+    height: 3rem;
+  
+    &__input{
+      opacity: 0;
+      width: 0;
+      height: 0;
+  
+      &:checked + .switch__slide{
+        background-color: darken($secondary-color, 30%);
+      }
+  
+      &:disabled + .switch__slide{
+        cursor:not-allowed;
+        opacity:0.7;
+      }
+      
+      &:focus + .switch__slide {
+        box-shadow: 0 0 1px $secondary-color;
+      }
+      
+      &:checked + .switch__slide:before {
+        -webkit-transform: translateX(3rem);
+        -ms-transform: translateX(3rem);
+        transform: translateX(3rem);
+        background-color: $button-color;
+      }
+  
+    }
+  
+    &__slide{
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: lighten($secondary-color, 15%);
+      -webkit-transition: .4s;
+      transition: .4s;
+  
+      &:before{
+        position: absolute;
+        content: "";
+        height: 2rem;
+        width: 2rem;
+        left: 0.5rem;
+        top: 0.5rem;
+        background-color: $text-color;
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+  
+      &--round{
+        border-radius: 3rem;
+      
+        &:before{
+          border-radius: 50%;
+        }
+      }
+  
+    }
+}

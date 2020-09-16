@@ -1,0 +1,22 @@
+.btn{
+    background-color:$button-color;
+    border:0;
+    padding:0.5rem 1rem;
+    color:$text-color;
+    display:inline-block;
+    text-decoration:none;
+    font-size:1.2rem;
+    text-align:center;
+    cursor:pointer;
+    transition: all 0.4s;
+
+
+    &:hover,
+    &:active,
+    &:focus,
+    &--active{
+        background-color:$secondary-color;
+        color:$text-color;
+        text-decoration:none;
+    }
+}

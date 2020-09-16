@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies Consent</title>
+<link href="cookies-consent.css" rel="stylesheet"><script src="cookies-consent.js"></script></head>
+<body>
+    <h1>Testing cookies consent</h1>
+    <script>
+        const cookieSettings = {
+            title: 'Αυτή η ιστοσελίδα χρησιμοποιεί cookies!',
+            description: 'Χρησιμοποιούμε cookie για την εξατομίκευση περιεχομένου και διαφημίσεων, την παροχή λειτουργιών κοινωνικών μέσων και την ανάλυση της επισκεψιμότητάς μας. Αν συνεχίσετε να χρησιμοποιείτε την ιστοσελίδα μας, συναινείτε στη χρήση των cookies μας.',
+            buttons: {
+                approve: 'Αποδέχομαι',
+                manage: 'Προτιμήσεις',
+                save: 'Αποθήκευση'
+            },
+            subtitle: 'Διαχείριση προτιμήσεων cookies',
+            categories: [
+                {
+                    name: 'necessary',
+                    checked: true,
+                    disabled: true,
+                    title: 'Αναγκαία Cookies',
+                    description: 'Τα απαραίτητα cookies βοηθούν στο να γίνει χρηστική μία ιστοσελίδα, επιτρέποντας βασικές λειτουργίες όπως την πλοήγηση και την πρόσβαση σε ασφαλείς περιοχές της ιστοσελίδας. Η ιστοσελίδα δεν μπορεί να λειτουργήσει σωστά χωρίς αυτά τα cookies.'
+                },
+                {
+                    name: 'statistics',
+                    checked: false,
+                    disabled: false,
+                    title: 'Cookies Στατιστικών',
+                    description: 'Τα Cookies στατιστικών βοηθούν τους ιδιοκτήτες ιστοχώρου να κατανοήσουν πώς αλληλεπιδρούν οι επισκέπτες με τις σελίδες συλλέγοντας και αναφέροντας πληροφορίες ανώνυμα.'
+                },
+                {
+                    name: 'marketings',
+                    checked: false,
+                    disabled: false,
+                    title: 'Cookies εμπορικής προώθησης',
+                    description: 'Τα cookies Εμπορικής Προώθησης χρησιμοποιούνται για την παρακολούθηση των επισκεπτών στους ιστότοπους, με πρόθεση να εμφανίσουμε διαφημίσεις που είναι σχετικές και ελκυστικές για τους χρήστες.'
+                },		
+            ]
+
+        };
+
+        cookiesConsent.initCookies(cookieSettings);
+    </script>
+</body>
+</html>
