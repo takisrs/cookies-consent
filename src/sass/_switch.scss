@@ -1,8 +1,8 @@
 .switch {
     position: relative;
     display: inline-block;
-    width: 6rem;
-    height: 3rem;
+    width: 4rem;
+    height: 2rem;
   
     &__input{
       opacity: 0;
@@ -23,10 +23,10 @@
       }
       
       &:checked + .switch__slide:before {
-        -webkit-transform: translateX(3rem);
-        -ms-transform: translateX(3rem);
-        transform: translateX(3rem);
-        background-color: $button-color;
+        -webkit-transform: translateX(2rem);
+        -ms-transform: translateX(2rem);
+        transform: translateX(2rem);
+        background-color: $button-bg-color;
       }
   
     }
@@ -45,8 +45,8 @@
       &:before{
         position: absolute;
         content: "";
-        height: 2rem;
-        width: 2rem;
+        height: 1rem;
+        width: 1rem;
         left: 0.5rem;
         top: 0.5rem;
         background-color: $text-color;
@@ -55,7 +55,7 @@
       }
   
       &--round{
-        border-radius: 3rem;
+        border-radius: 2rem;
       
         &:before{
           border-radius: 50%;

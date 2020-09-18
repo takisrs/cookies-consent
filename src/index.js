@@ -1,5 +1,5 @@
 import './sass/main.scss';
 
-import { initCookies, cookiesEnabled } from './js/cookies.js';
+import { init, isEnabled, hasConsentCookie } from './js/cookies.js';
 
-export { initCookies, cookiesEnabled };
+export { init, isEnabled, hasConsentCookie };

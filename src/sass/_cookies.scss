@@ -19,6 +19,14 @@
 
     &__title{
         margin:0 0 0.5rem;
+
+        &--primary{
+            font-size:1.5rem;
+        }
+
+        &--secondary{
+            font-size: 1.3rem;
+        }
     }
 
     &__message{
@@ -47,24 +55,45 @@
 
         &--manage{
             display:flex;
-            align-items: center;
-            color:$text-color;
+            align-items: baseline;
+            color:$button-text-color;
 
             &:focus,
             &:hover{
-                color:$text-color;
+                color:darken($button-text-color, 10%);
             }
 
-            span, svg{
-                margin-left:0.4rem;
+            &:after{
+                content: "";
+                width: 0; 
+                height: 0; 
+                border-left: 0.5rem solid transparent;
+                border-right: 0.5rem solid transparent;
+                border-top: 0.5rem solid $button-text-color;
+                margin-left:0.3rem;
             }
+
         }
+
+        &--active{
+            color:darken($button-text-color, 20%);
+
+
+            &:after{
+                border-bottom: 0.5rem solid $button-text-color;
+                border-top: 0;
+            }
+
+        }
+
+
     }
 
     &__category{
         margin:1rem 0;
 
         h3{
+            font-size:1.1rem;
             display:flex;
             align-items:center;
             margin-bottom:0.4rem;
