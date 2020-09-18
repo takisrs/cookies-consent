@@ -6,7 +6,7 @@ to be updated
 
 Include the javascript and css files in your HTML document.
 
-```
+```html
 <link href="dist/cookies-consent.css" rel="stylesheet">
 
 <script src="dist/cookies-consent.min.js"></script>
@@ -20,6 +20,7 @@ Include the javascript and css files in your HTML document.
 
 Check if the user has already give his consent, otherwise init the popup. You may pass an object to overwrite the defaults.
 
+```html
 <script>
     if (!cookiesConsent.hasConsentCookie())
         cookiesConsent.init({
@@ -58,13 +59,14 @@ Check if the user has already give his consent, otherwise init the popup. You ma
             ];
         });
 </script>
-
+```
 
 ### Check if cookies are enabled for a specific category
 
-
+```html
 <script>
     if (cookiesConsent.isEnabled('statistics')){
         console.log("Statistic cookies are enabled!");
     }
 </script>
+```
