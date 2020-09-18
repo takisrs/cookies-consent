@@ -32,6 +32,8 @@ module.exports = {
                         presets: [
                             [
                                 "@babel/preset-env", {
+                                    //useBuiltIns: "usage",
+                                    //corejs: 3
                                 }
                             ]
                         ]                        
@@ -49,11 +51,13 @@ module.exports = {
                     },
                     {
                         loader: "postcss-loader",
-                        /*options: {
-                            plugins: function(){
-                                return [require("autoprefixer")];
+                        options: {
+                            postcssOptions: {
+                                plugins: function(){
+                                    return [require("autoprefixer")];
+                                }
                             }
-                        }*/
+                        }
                     },
                     {
                         loader: "sass-loader"
