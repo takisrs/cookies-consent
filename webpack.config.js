@@ -6,7 +6,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 module.exports = {
-    mode: "development",
+    mode: "production",
     entry: {
         "cookies-consent": "./src/index.js",
         "cookies-consent.min": "./src/index.js",
@@ -20,7 +20,7 @@ module.exports = {
     devServer: {
         contentBase: './dist',
     },
-    devtool: 'sourceMap',
+    devtool: 'source-map',
     module: {
         rules: [            
             {

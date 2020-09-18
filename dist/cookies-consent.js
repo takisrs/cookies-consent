@@ -91,67 +91,81 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
-/******/ ({
+/******/ ([
+/* 0 */
+/***/ (function(module, exports, __webpack_require__) {
 
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
-/*! exports provided: init, isEnabled, hasConsentCookie */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _sass_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sass/main.scss */ "./src/sass/main.scss");
-/* harmony import */ var _sass_main_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_sass_main_scss__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _js_cookies_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/cookies.js */ "./src/js/cookies.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "init", function() { return _js_cookies_js__WEBPACK_IMPORTED_MODULE_1__["init"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "isEnabled", function() { return _js_cookies_js__WEBPACK_IMPORTED_MODULE_1__["isEnabled"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "hasConsentCookie", function() { return _js_cookies_js__WEBPACK_IMPORTED_MODULE_1__["hasConsentCookie"]; });
-
-
-
-
+// extracted by mini-css-extract-plugin
 
 /***/ }),
-
-/***/ "./src/js/cookies.js":
-/*!***************************!*\
-  !*** ./src/js/cookies.js ***!
-  \***************************/
-/*! exports provided: init, hasConsentCookie, isEnabled */
+/* 1 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "init", function() { return init; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hasConsentCookie", function() { return hasConsentCookie; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isEnabled", function() { return isEnabled; });
-/* harmony import */ var _defaults__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./defaults */ "./src/js/defaults.js");
 
-var cookieName = _defaults__WEBPACK_IMPORTED_MODULE_0__["cookieName"];
-var rootClass = _defaults__WEBPACK_IMPORTED_MODULE_0__["rootClass"];
-var cookieDuration = _defaults__WEBPACK_IMPORTED_MODULE_0__["cookieDuration"];
-var init = function init() {
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "init", function() { return /* reexport */ cookies_init; });
+__webpack_require__.d(__webpack_exports__, "isEnabled", function() { return /* reexport */ isEnabled; });
+__webpack_require__.d(__webpack_exports__, "hasConsentCookie", function() { return /* reexport */ hasConsentCookie; });
+
+// EXTERNAL MODULE: ./src/sass/main.scss
+var main = __webpack_require__(0);
+
+// CONCATENATED MODULE: ./src/js/defaults.js
+var cookieName = "cookies";
+var rootClass = "cookies";
+var cookieDuration = 60 * 60 * 24 * 365;
+var defaults_containerEl = "body";
+var defaults_title = "This website uses cookies";
+var defaults_description = "We use cookies and other tracking technologies to improve your browsing experience on our website, to show you personalized content and targeted ads, to analyze our website traffic, and to understand where our visitors are coming from. By browsing our website, you consent to our use of cookies and other tracking technologies.";
+var defaults_buttonApprove = "Accept";
+var defaults_buttonManage = "Preferences";
+var defaults_buttonSave = "Save";
+var defaults_subtitle = "Manage your cookie preferences";
+var defaults_categories = [{
+  name: 'necessary',
+  checked: true,
+  disabled: true,
+  title: 'Necessary cookies',
+  description: 'Necessary cookies help make a website usable by enabling basic functions like page navigation and access to secure areas of the website. The website cannot function properly without these cookies.'
+}, {
+  name: 'statistics',
+  checked: false,
+  disabled: false,
+  title: 'Statistic cookies',
+  description: 'Statistic cookies help website owners to understand how visitors interact with websites by collecting and reporting information anonymously.'
+}, {
+  name: 'marketing',
+  checked: false,
+  disabled: false,
+  title: 'Marketing cookies',
+  description: 'Marketing cookies are used to track visitors across websites. The intention is to display ads that are relevant and engaging for the individual user and thereby more valuable for publishers and third party advertisers.'
+}];
+// CONCATENATED MODULE: ./src/js/cookies.js
+
+var cookies_cookieName = cookieName;
+var cookies_rootClass = rootClass;
+var cookies_cookieDuration = cookieDuration;
+var cookies_init = function init() {
   var _settings$buttons, _settings$buttons2, _settings$buttons3;
 
   var settings = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  cookieName = settings.cookieName || cookieName;
-  rootClass = settings.rootClass || rootClass;
-  cookieDuration = settings.cookieDuration || cookieDuration;
-  var containerEl = document.querySelector(settings.container || _defaults__WEBPACK_IMPORTED_MODULE_0__["containerEl"]);
-  var title = settings.title || _defaults__WEBPACK_IMPORTED_MODULE_0__["title"];
-  var description = settings.description || _defaults__WEBPACK_IMPORTED_MODULE_0__["description"];
-  var buttonApprove = (settings === null || settings === void 0 ? void 0 : (_settings$buttons = settings.buttons) === null || _settings$buttons === void 0 ? void 0 : _settings$buttons.approve) || _defaults__WEBPACK_IMPORTED_MODULE_0__["buttonApprove"];
-  var buttonManage = (settings === null || settings === void 0 ? void 0 : (_settings$buttons2 = settings.buttons) === null || _settings$buttons2 === void 0 ? void 0 : _settings$buttons2.manage) || _defaults__WEBPACK_IMPORTED_MODULE_0__["buttonManage"];
-  var buttonSave = (settings === null || settings === void 0 ? void 0 : (_settings$buttons3 = settings.buttons) === null || _settings$buttons3 === void 0 ? void 0 : _settings$buttons3.save) || _defaults__WEBPACK_IMPORTED_MODULE_0__["buttonSave"];
-  var subtitle = settings.subtitle || _defaults__WEBPACK_IMPORTED_MODULE_0__["subtitle"];
-  var categories = settings.categories || _defaults__WEBPACK_IMPORTED_MODULE_0__["categories"];
+  cookies_cookieName = settings.cookieName || cookies_cookieName;
+  cookies_rootClass = settings.rootClass || cookies_rootClass;
+  cookies_cookieDuration = settings.cookieDuration || cookies_cookieDuration;
+  var containerEl = document.querySelector(settings.container || defaults_containerEl);
+  var title = settings.title || defaults_title;
+  var description = settings.description || defaults_description;
+  var buttonApprove = (settings === null || settings === void 0 ? void 0 : (_settings$buttons = settings.buttons) === null || _settings$buttons === void 0 ? void 0 : _settings$buttons.approve) || defaults_buttonApprove;
+  var buttonManage = (settings === null || settings === void 0 ? void 0 : (_settings$buttons2 = settings.buttons) === null || _settings$buttons2 === void 0 ? void 0 : _settings$buttons2.manage) || defaults_buttonManage;
+  var buttonSave = (settings === null || settings === void 0 ? void 0 : (_settings$buttons3 = settings.buttons) === null || _settings$buttons3 === void 0 ? void 0 : _settings$buttons3.save) || defaults_buttonSave;
+  var subtitle = settings.subtitle || defaults_subtitle;
+  var categories = settings.categories || defaults_categories;
   var categoriesHtml = '';
 
   if (categories.length > 0) {
@@ -160,7 +174,7 @@ var init = function init() {
     }
   }
 
-  var template = "\n    <div class=\"".concat(rootClass, "\">\n        <h2 class=\"").concat(rootClass, "__title ").concat(rootClass, "__title--primary\">").concat(title, "</h2>\n        <div class=\"").concat(rootClass, "__message\">").concat(description, "</div>\n        \n        <div class=\"").concat(rootClass, "__actions\">\n            <a class=\"").concat(rootClass, "__action ").concat(rootClass, "__action--approve btn\" id=\"cookies-approve\" href=\"#\">").concat(buttonApprove, "</a><br/>\n            <a class=\"").concat(rootClass, "__action ").concat(rootClass, "__action--manage\" id=\"cookies-manage\" href=\"#\">").concat(buttonManage, "</a>\n        </div>\n\n        <div class=\"").concat(rootClass, "__preferences\">\n            <h2 class=\"").concat(rootClass, "__title ").concat(rootClass, "__title--secondary\">").concat(subtitle, "</h2>\n\n            <div class=\"").concat(rootClass, "__categories\">").concat(categoriesHtml, "</div>\t\t\n\n            <div class=\"").concat(rootClass, "__actions\">\n                <a class=\"").concat(rootClass, "__action ").concat(rootClass, "__action--save btn\" id=\"cookies-save\" href=\"#\">").concat(buttonSave, "</a><br/>\n            </div>\n        </div>\n    </div>");
+  var template = "\n    <div class=\"".concat(cookies_rootClass, "\">\n        <h2 class=\"").concat(cookies_rootClass, "__title ").concat(cookies_rootClass, "__title--primary\">").concat(title, "</h2>\n        <div class=\"").concat(cookies_rootClass, "__message\">").concat(description, "</div>\n        \n        <div class=\"").concat(cookies_rootClass, "__actions\">\n            <a class=\"").concat(cookies_rootClass, "__action ").concat(cookies_rootClass, "__action--approve btn\" id=\"cookies-approve\" href=\"#\">").concat(buttonApprove, "</a><br/>\n            <a class=\"").concat(cookies_rootClass, "__action ").concat(cookies_rootClass, "__action--manage\" id=\"cookies-manage\" href=\"#\">").concat(buttonManage, "</a>\n        </div>\n\n        <div class=\"").concat(cookies_rootClass, "__preferences\">\n            <h2 class=\"").concat(cookies_rootClass, "__title ").concat(cookies_rootClass, "__title--secondary\">").concat(subtitle, "</h2>\n\n            <div class=\"").concat(cookies_rootClass, "__categories\">").concat(categoriesHtml, "</div>\t\t\n\n            <div class=\"").concat(cookies_rootClass, "__actions\">\n                <a class=\"").concat(cookies_rootClass, "__action ").concat(cookies_rootClass, "__action--save btn\" id=\"cookies-save\" href=\"#\">").concat(buttonSave, "</a><br/>\n            </div>\n        </div>\n    </div>");
   var cookiesEl = document.createElement('div');
   cookiesEl.innerHTML = template;
   containerEl.appendChild(cookiesEl); //manage cookies toggle
@@ -168,8 +182,8 @@ var init = function init() {
   var cookiesManageBtn = document.getElementById('cookies-manage');
   cookiesManageBtn && cookiesManageBtn.addEventListener('click', function (e) {
     e.preventDefault();
-    e.target.classList.toggle(rootClass + '__action--active');
-    var cookiesPrefsEl = cookiesEl.querySelector('.' + rootClass + '__preferences');
+    e.target.classList.toggle(cookies_rootClass + '__action--active');
+    var cookiesPrefsEl = cookiesEl.querySelector('.' + cookies_rootClass + '__preferences');
     if (cookiesPrefsEl) cookiesPrefsEl.style.display = cookiesPrefsEl.style.display == 'block' ? 'none' : 'block';
   }); //approve cookies
 
@@ -191,7 +205,7 @@ var init = function init() {
 var renderCategory = function renderCategory(category) {
   var disabled = category.disabled ? 'DISABLED' : '';
   var checked = isEnabled(category.name) || category.checked ? 'CHECKED' : '';
-  return "\n    <div class=\"".concat(rootClass, "__category ").concat(rootClass, "__category--").concat(category.name, "\">\n        <h3>\n            <label class=\"switch\">\n                <input class=\"switch__input\" type=\"checkbox\" id=\"").concat(category.name, "_cookies\" name=\"").concat(category.name, "_cookies\" value=\"1\" ").concat(checked, " ").concat(disabled, ">\n                <span class=\"switch__slide switch__slide--round\"></span>\n            </label>\n            ").concat(category.title, "\n        </h3>\n        <div>").concat(category.description, "</div>\n    </div>");
+  return "\n    <div class=\"".concat(cookies_rootClass, "__category ").concat(cookies_rootClass, "__category--").concat(category.name, "\">\n        <h3>\n            <label class=\"switch\">\n                <input class=\"switch__input\" type=\"checkbox\" id=\"").concat(category.name, "_cookies\" name=\"").concat(category.name, "_cookies\" value=\"1\" ").concat(checked, " ").concat(disabled, ">\n                <span class=\"switch__slide switch__slide--round\"></span>\n            </label>\n            ").concat(category.title, "\n        </h3>\n        <div>").concat(category.description, "</div>\n    </div>");
 };
 
 var updatePrefs = function updatePrefs(categories) {
@@ -204,7 +218,7 @@ var updatePrefs = function updatePrefs(categories) {
     }
   }
 
-  document.cookie = cookieName + '=' + JSON.stringify(cookieArr) + ';max-age=' + cookieDuration + ';path=/';
+  document.cookie = cookies_cookieName + '=' + JSON.stringify(cookieArr) + ';max-age=' + cookies_cookieDuration + ';path=/';
 };
 
 var getConsentCookie = function getConsentCookie() {
@@ -214,7 +228,7 @@ var getConsentCookie = function getConsentCookie() {
   for (var i = 0; i < cookiesArr.length; i++) {
     var cookie = cookiesArr[i].split('=');
 
-    if (cookie[0].trim() === cookieName) {
+    if (cookie[0].trim() === cookies_cookieName) {
       return JSON.parse(cookie[1]);
     }
   }
@@ -233,71 +247,12 @@ var isEnabled = function isEnabled() {
 
   return false;
 };
+// CONCATENATED MODULE: ./src/index.js
 
-/***/ }),
 
-/***/ "./src/js/defaults.js":
-/*!****************************!*\
-  !*** ./src/js/defaults.js ***!
-  \****************************/
-/*! exports provided: cookieName, rootClass, cookieDuration, containerEl, title, description, buttonApprove, buttonManage, buttonSave, subtitle, categories */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cookieName", function() { return cookieName; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "rootClass", function() { return rootClass; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cookieDuration", function() { return cookieDuration; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "containerEl", function() { return containerEl; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "title", function() { return title; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "description", function() { return description; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "buttonApprove", function() { return buttonApprove; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "buttonManage", function() { return buttonManage; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "buttonSave", function() { return buttonSave; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "subtitle", function() { return subtitle; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "categories", function() { return categories; });
-var cookieName = "cookies";
-var rootClass = "cookies";
-var cookieDuration = 60 * 60 * 24 * 365;
-var containerEl = "body";
-var title = "This website uses cookies";
-var description = "We use cookies and other tracking technologies to improve your browsing experience on our website, to show you personalized content and targeted ads, to analyze our website traffic, and to understand where our visitors are coming from. By browsing our website, you consent to our use of cookies and other tracking technologies.";
-var buttonApprove = "Accept";
-var buttonManage = "Preferences";
-var buttonSave = "Save";
-var subtitle = "Manage your cookie preferences";
-var categories = [{
-  name: 'necessary',
-  checked: true,
-  disabled: true,
-  title: 'Necessary cookies',
-  description: 'Necessary cookies help make a website usable by enabling basic functions like page navigation and access to secure areas of the website. The website cannot function properly without these cookies.'
-}, {
-  name: 'statistics',
-  checked: false,
-  disabled: false,
-  title: 'Statistic cookies',
-  description: 'Statistic cookies help website owners to understand how visitors interact with websites by collecting and reporting information anonymously.'
-}, {
-  name: 'marketing',
-  checked: false,
-  disabled: false,
-  title: 'Marketing cookies',
-  description: 'Marketing cookies are used to track visitors across websites. The intention is to display ads that are relevant and engaging for the individual user and thereby more valuable for publishers and third party advertisers.'
-}];
-
-/***/ }),
-
-/***/ "./src/sass/main.scss":
-/*!****************************!*\
-  !*** ./src/sass/main.scss ***!
-  \****************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
 
 /***/ })
-
-/******/ });
+/******/ ]);
 });
+//# sourceMappingURL=cookies-consent.js.map
