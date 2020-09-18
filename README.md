@@ -1,5 +1,7 @@
 # A simple cookies consent implementation
 
+[Demo](https://takisrs.github.io/cookies-consent/dist/)
+
 to be updated
 
 ## Installation
