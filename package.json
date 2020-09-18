@@ -1,11 +1,11 @@
 {
   "name": "@takisrs/cookies-consent",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple cookies consent implementation",
   "homepage": "https://github.com/takisrs/cookies-consent",
   "repository": "github:takisrs/cookies-consent",
   "keywords": ["cookies", "consent", "GDPR"],
-  "browser": "dist/main.js",
+  "browser": "dist/cookie-consent.min.js",
   "module": "src/index.js",
   "scripts": {
     "build": "webpack",
