@@ -1,6 +1,6 @@
 # A simple cookies consent implementation
 
-[Demo](https://takisrs.github.io/cookies-consent/dist/)
+[Demo](https://takisrs.github.io/cookies-consent/dist/){:target="_blank"}
 
 to be updated
 
