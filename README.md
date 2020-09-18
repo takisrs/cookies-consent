@@ -10,7 +10,6 @@ Include the javascript and css files in your HTML document.
 
 ```html
 <link href="dist/cookies-consent.css" rel="stylesheet">
-
 <script src="dist/cookies-consent.min.js"></script>
 ```
 

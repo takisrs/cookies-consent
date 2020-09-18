@@ -2,8 +2,8 @@
     position:fixed;
     bottom:1rem;
     left:1rem;
-    background:rgba($main-color, 0.87);
-    color:$text-color;
+    background:rgba($cc-main-color, 0.87);
+    color:$cc-text-color;
     padding:1rem;
     z-index:10;
     min-width:20rem;
@@ -41,8 +41,8 @@
     &__preferences{
         display:none;
         padding:1.5rem;
-        background:rgba($secondary-color, 0.9);
-        color:$text-color;
+        background:rgba($cc-secondary-color, 0.9);
+        color:$cc-text-color;
         margin-top:1rem;
     }
 
@@ -56,11 +56,11 @@
         &--manage{
             display:flex;
             align-items: baseline;
-            color:$button-text-color;
+            color:$cc-button-text-color;
 
             &:focus,
             &:hover{
-                color:darken($button-text-color, 10%);
+                color:darken($cc-button-text-color, 10%);
             }
 
             &:after{
@@ -69,18 +69,18 @@
                 height: 0; 
                 border-left: 0.5rem solid transparent;
                 border-right: 0.5rem solid transparent;
-                border-top: 0.5rem solid $button-text-color;
+                border-top: 0.5rem solid $cc-button-text-color;
                 margin-left:0.3rem;
             }
 
         }
 
         &--active{
-            color:darken($button-text-color, 20%);
+            color:darken($cc-button-text-color, 20%);
 
 
             &:after{
-                border-bottom: 0.5rem solid $button-text-color;
+                border-bottom: 0.5rem solid $cc-button-text-color;
                 border-top: 0;
             }
 

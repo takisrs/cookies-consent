@@ -1,8 +1,8 @@
-.btn{
-    background-color:$button-bg-color;
+.button{
+    background-color:$cc-button-bg-color;
     border:0;
     padding:0.5rem 1rem;
-    color:$button-text-color;
+    color:$cc-button-text-color;
     display:inline-block;
     text-decoration:none;
     font-size:1.2rem;
@@ -15,8 +15,8 @@
     &:active,
     &:focus,
     &--active{
-        background-color:$button-bg-color-hover;
-        color:$button-text-color-hover;
+        background-color:$cc-button-bg-color-hover;
+        color:$cc-button-text-color-hover;
         text-decoration:none;
     }
 }

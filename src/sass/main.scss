@@ -1,10 +1,10 @@
-$main-color: #000000 !default;
-$secondary-color: #4e4e4e !default;
-$text-color: #ffffff !default;
-$button-bg-color: #018587 !default;
-$button-text-color: #ffffff !default;
-$button-bg-color-hover: #4e4e4e !default;
-$button-text-color-hover: #ffffff !default;
+$cc-main-color: #000000 !default;
+$cc-secondary-color: #4e4e4e !default;
+$cc-text-color: #ffffff !default;
+$cc-button-bg-color: #018587 !default;
+$cc-button-text-color: #ffffff !default;
+$cc-button-bg-color-hover: #4e4e4e !default;
+$cc-button-text-color-hover: #ffffff !default;
 
 @import "button.scss";
 @import "switch.scss";

@@ -31,7 +31,7 @@ export const init = (settings = {}) => {
         <div class="${rootClass}__message">${description}</div>
         
         <div class="${rootClass}__actions">
-            <a class="${rootClass}__action ${rootClass}__action--approve btn" id="cookies-approve" href="#">${buttonApprove}</a><br/>
+            <a class="${rootClass}__action ${rootClass}__action--approve button" id="cookies-approve" href="#">${buttonApprove}</a><br/>
             <a class="${rootClass}__action ${rootClass}__action--manage" id="cookies-manage" href="#">${buttonManage}</a>
         </div>
 
@@ -41,7 +41,7 @@ export const init = (settings = {}) => {
             <div class="${rootClass}__categories">${categoriesHtml}</div>		
 
             <div class="${rootClass}__actions">
-                <a class="${rootClass}__action ${rootClass}__action--save btn" id="cookies-save" href="#">${buttonSave}</a><br/>
+                <a class="${rootClass}__action ${rootClass}__action--save button" id="cookies-save" href="#">${buttonSave}</a><br/>
             </div>
         </div>
     </div>`;

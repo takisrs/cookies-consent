@@ -10,7 +10,7 @@
       height: 0;
   
       &:checked + .switch__slide{
-        background-color: darken($secondary-color, 30%);
+        background-color: darken($cc-secondary-color, 30%);
       }
   
       &:disabled + .switch__slide{
@@ -19,14 +19,14 @@
       }
       
       &:focus + .switch__slide {
-        box-shadow: 0 0 1px $secondary-color;
+        box-shadow: 0 0 1px $cc-secondary-color;
       }
       
       &:checked + .switch__slide:before {
         -webkit-transform: translateX(2rem);
         -ms-transform: translateX(2rem);
         transform: translateX(2rem);
-        background-color: $button-bg-color;
+        background-color: $cc-button-bg-color;
       }
   
     }
@@ -38,7 +38,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background-color: lighten($secondary-color, 15%);
+      background-color: lighten($cc-secondary-color, 15%);
       -webkit-transition: .4s;
       transition: .4s;
   
@@ -49,7 +49,7 @@
         width: 1rem;
         left: 0.5rem;
         top: 0.5rem;
-        background-color: $text-color;
+        background-color: $cc-text-color;
         -webkit-transition: .4s;
         transition: .4s;
       }
