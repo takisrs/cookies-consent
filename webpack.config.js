@@ -2,14 +2,17 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 module.exports = {
     mode: "development",
     entry: {
-        main: "./src/index.js"
+        "cookies-consent": "./src/index.js",
+        "cookies-consent.min": "./src/index.js",
     },
     output: {
-        filename: 'cookies-consent.js',
+        filename: '[name].js',
         path: path.resolve(__dirname, 'dist'),
         library: 'cookiesConsent',
         libraryTarget: 'umd'
@@ -29,8 +32,6 @@ module.exports = {
                         presets: [
                             [
                                 "@babel/preset-env", {
-                                    useBuiltIns: "usage",
-                                    corejs: 3
                                 }
                             ]
                         ]                        
@@ -59,6 +60,20 @@ module.exports = {
                     }
                 ]
             },
+        ]
+    },
+    optimization: {
+        minimize: true,
+        minimizer: [
+            new CssMinimizerPlugin({
+                include: /\.min\.css$/
+            }), 
+            new TerserPlugin({
+                cache: true,
+                parallel: true,
+                sourceMap: true,
+                include: /\.min\.js$/
+            })
         ]
     },
     plugins: [
