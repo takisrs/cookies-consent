@@ -1,6 +1,6 @@
 {
   "name": "@takisrs/cookies-consent",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A simple cookies consent implementation",
   "homepage": "https://github.com/takisrs/cookies-consent",
   "repository": "github:takisrs/cookies-consent",
@@ -30,9 +30,7 @@
     "sass-loader": "^10.0.2",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
-  },
-  "dependencies": {
+    "webpack-dev-server": "^3.11.0",
     "css-minimizer-webpack-plugin": "^1.1.3",
     "terser-webpack-plugin": "^4.2.1"
   }
