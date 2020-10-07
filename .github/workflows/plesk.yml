@@ -13,6 +13,6 @@ jobs:
         git config --global user.email "takispadaz@gmail.com"
         git config --global user.name "Panos"
         git checkout master
-        git push -u plesk master
+        git push -u --force plesk master
       env:
         pass: ${{ secrets.REPO_PASS }}  
