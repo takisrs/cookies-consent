@@ -9,7 +9,7 @@ jobs:
         fetch-depth: '0'
         ref: 'master'
     - run: |
-        git remote add plesk https://testatnet5:$env.pass@miwifiradio.testatnet5.com/plesk-git/miwifiradio.git
+        git remote add plesk https://testatnet5:$pass@miwifiradio.testatnet5.com/plesk-git/miwifiradio.git
         git config --global user.email "takispadaz@gmail.com"
         git config --global user.name "Panos"
         git checkout master
