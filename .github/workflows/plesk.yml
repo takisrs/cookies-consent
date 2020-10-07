@@ -7,7 +7,7 @@ jobs:
     - uses: actions/checkout@v2
       with:
         fetch-depth: '0'
-        pass: ${{ secrets.FTP_PASSWORD }} 
+        pass: ${{ secrets.REPO_PASS }} 
         ref: 'master'
     - run: |
         git remote add plesk http://testatnet5:$pass@miwifiradio.testatnet5.com/plesk-git/miwifiradio.git
