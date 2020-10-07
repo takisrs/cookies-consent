@@ -1,0 +1,16 @@
+name: push to plesk
+on: push
+jobs:
+  repo-sync:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: '0'
+        ref: 'master'
+    - run: |
+        git remote add plesk testatnet5@miwifiradio.testatnet5.com:~/git/miwifiradio.git
+        git config --global user.email "takispadaz@gmail.com"
+        git config --global user.name "Panos"
+        git checkout master
+        git push -u plesk master
