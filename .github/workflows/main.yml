@@ -11,6 +11,7 @@ jobs:
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:
-        ftp-server: ftp://testatnet5.com/
+        ftp-server: ftp://testatnet5.com/cookies-consent
         ftp-username: testatnet5
         ftp-password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: dist/
