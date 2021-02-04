@@ -3,7 +3,7 @@ name: FTP deploy
 jobs:
   FTP-Deploy-Action:
     name: FTP-Deploy-Action
-    runs-on: ubuntu18.04
+    runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@v2.1.0
       with:
