@@ -1,22 +1,21 @@
-.button{
-    background-color:$cc-button-bg-color;
-    border:0;
-    padding:0.5rem 1rem;
-    color:$cc-button-text-color;
-    display:inline-block;
-    text-decoration:none;
-    font-size:1.2rem;
-    text-align:center;
-    cursor:pointer;
-    transition: all 0.4s;
+.button {
+	background-color: $cc-button-bg-color;
+	border: 0;
+	padding: 0.5rem 1rem;
+	color: $cc-button-text-color;
+	display: inline-block;
+	text-decoration: none;
+	font-size: 1.2rem;
+	text-align: center;
+	cursor: pointer;
+	transition: all 0.4s;
 
-
-    &:hover,
-    &:active,
-    &:focus,
-    &--active{
-        background-color:$cc-button-bg-color-hover;
-        color:$cc-button-text-color-hover;
-        text-decoration:none;
-    }
+	&:hover,
+	&:active,
+	&:focus,
+	&--active {
+		background-color: $cc-button-bg-color-hover;
+		color: $cc-button-text-color-hover;
+		text-decoration: none;
+	}
 }

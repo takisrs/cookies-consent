@@ -1,106 +1,101 @@
 .cookies {
-    position:fixed;
-    bottom:1rem;
-    left:1rem;
-    background:rgba($cc-main-color, 0.87);
-    color:$cc-text-color;
-    padding:1rem;
-    z-index:10;
-    min-width:20rem;
-    max-width:30rem;
+	position: fixed;
+	bottom: 1rem;
+	left: 1rem;
+	background: rgba($cc-main-color, 0.87);
+	color: $cc-text-color;
+	padding: 1rem;
+	z-index: 10;
+	min-width: 20rem;
+	max-width: 30rem;
 
-    @media (max-width: 768px){
-        bottom:0;
-        left:0;
-        right:0;
-        max-width:100%;
-        min-width:auto;
-    }
+	@media (max-width: 768px) {
+		bottom: 0;
+		left: 0;
+		right: 0;
+		max-width: 100%;
+		min-width: auto;
+	}
 
-    &__title{
-        margin:0 0 0.5rem;
+	&__title {
+		margin: 0 0 0.5rem;
 
-        &--primary{
-            font-size:1.5rem;
-        }
+		&--primary {
+			font-size: 1.5rem;
+		}
 
-        &--secondary{
-            font-size: 1.3rem;
-        }
-    }
+		&--secondary {
+			font-size: 1.3rem;
+		}
+	}
 
-    &__message{
-        padding:0.5rem 0rem;
-    }
+	&__message {
+		padding: 0.5rem 0rem;
+	}
 
-    &__actions{
-        display:flex;
-        align-items:center;
-    }
+	&__actions {
+		display: flex;
+		align-items: center;
+	}
 
-    &__preferences{
-        display:none;
-        padding:1.5rem;
-        background:rgba($cc-secondary-color, 0.9);
-        color:$cc-text-color;
-        margin-top:1rem;
-    }
+	&__preferences {
+		display: none;
+		padding: 1.5rem;
+		background: rgba($cc-secondary-color, 0.9);
+		color: $cc-text-color;
+		margin-top: 1rem;
+	}
 
-    &__action{
-        margin-top:0.5rem;
+	&__action {
+		margin-top: 0.5rem;
 
-        &--approve{
-            margin-right:1rem;
-        }
+		&--approve {
+			margin-right: 1rem;
+		}
 
-        &--manage{
-            display:flex;
-            align-items: baseline;
-            color:$cc-button-text-color;
+		&--manage {
+			display: flex;
+			align-items: baseline;
+			color: $cc-button-text-color;
 
-            &:focus,
-            &:hover{
-                color:darken($cc-button-text-color, 10%);
-            }
+			&:focus,
+			&:hover {
+				color: darken($cc-button-text-color, 10%);
+			}
 
-            &:after{
-                content: "";
-                width: 0; 
-                height: 0; 
-                border-left: 0.5rem solid transparent;
-                border-right: 0.5rem solid transparent;
-                border-top: 0.5rem solid $cc-button-text-color;
-                margin-left:0.3rem;
-            }
+			&:after {
+				content: "";
+				width: 0;
+				height: 0;
+				border-left: 0.5rem solid transparent;
+				border-right: 0.5rem solid transparent;
+				border-top: 0.5rem solid $cc-button-text-color;
+				margin-left: 0.3rem;
+			}
+		}
 
-        }
+		&--active {
+			color: darken($cc-button-text-color, 20%);
 
-        &--active{
-            color:darken($cc-button-text-color, 20%);
+			&:after {
+				border-bottom: 0.5rem solid $cc-button-text-color;
+				border-top: 0;
+			}
+		}
+	}
 
+	&__category {
+		margin: 1rem 0;
 
-            &:after{
-                border-bottom: 0.5rem solid $cc-button-text-color;
-                border-top: 0;
-            }
+		h3 {
+			font-size: 1.1rem;
+			display: flex;
+			align-items: center;
+			margin-bottom: 0.4rem;
+		}
 
-        }
-
-
-    }
-
-    &__category{
-        margin:1rem 0;
-
-        h3{
-            font-size:1.1rem;
-            display:flex;
-            align-items:center;
-            margin-bottom:0.4rem;
-        }
-
-        .switch{
-            margin-right:1rem;
-        }
-    }
+		.switch {
+			margin-right: 1rem;
+		}
+	}
 }
