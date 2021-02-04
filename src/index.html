@@ -13,8 +13,10 @@
 <body>
     <h1>Testing cookies consent</h1>
     <script>
-        if (!cookiesConsent.hasConsentCookie())
-            cookiesConsent.init();
+        document.addEventListener("DOMContentLoaded", function(event) {
+            if (!cookiesConsent.hasConsentCookie())
+                cookiesConsent.init();
+        });
     </script>
 </body>
 </html>

@@ -18,7 +18,9 @@ module.exports = {
         libraryTarget: 'umd'
     },
     devServer: {
-        contentBase: './dist',
+        open:true,
+        injectClient: false, // temp fix for webpack 5
+        contentBase: path.resolve(__dirname, 'dist'),
     },
     devtool: 'source-map',
     module: {
@@ -50,14 +52,7 @@ module.exports = {
                         loader: "css-loader"
                     },
                     {
-                        loader: "postcss-loader",
-                        options: {
-                            postcssOptions: {
-                                plugins: function(){
-                                    return [require("autoprefixer")];
-                                }
-                            }
-                        }
+                        loader: "postcss-loader"
                     },
                     {
                         loader: "sass-loader"
@@ -73,9 +68,7 @@ module.exports = {
                 include: /\.min\.css$/
             }), 
             new TerserPlugin({
-                cache: true,
                 parallel: true,
-                sourceMap: true,
                 include: /\.min\.js$/
             })
         ]
@@ -90,8 +83,8 @@ module.exports = {
         new HtmlWebpackPlugin({ 
             template: './src/index.html', 
             cache: false, 
-            scriptLoading: 'blocking', 
-            inject: 'head' 
+            scriptLoading: 'defer', 
+            inject: 'body' 
         }),
     ],
 }
