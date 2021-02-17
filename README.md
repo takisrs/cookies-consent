@@ -2,8 +2,6 @@
 
 [Demo](https://takisrs.github.io/cookies-consent/dist/)
 
-to be updated
-
 ## Installation
 
 Include the javascript and css files in your HTML document.
