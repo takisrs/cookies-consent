@@ -17,7 +17,7 @@ Include the javascript and css files in your HTML document.
 
 ### Init cookies popup dialog
 
-Check if the user has already give his consent, otherwise init the popup. You may pass an object to overwrite the defaults.
+Check if the user has already given his consent, otherwise init the popup. You may pass an object as an argument to overwrite the defaults.
 
 ```javascript
 if (!cookiesConsent.hasConsentCookie())
